@@ -1,0 +1,24 @@
+{% extends 'index.html' %}
+
+{% load app %}
+{% load static %}
+
+{% block list %}
+
+<div class="container_article">
+{% for sig in sImg %}
+<article class=" card ">
+<div class="item">
+    <img src= "{{ sig.thumbnail.url  }}" class="card_image"/>
+    <p class="card_title">{{ sig.title }}</p>
+    <p class="card_content">{{ sig.card_text  | markdown_to_html | safe }}</p>
+    <div class="card_continue">
+        <button class="continue_button"><a href="{% url 'myBlog:detail' sig.id %}">記事詳細</a></button>
+    </div>
+</div>
+</article>
+ {%endfor%}
+
+</div>
+
+{% endblock %}

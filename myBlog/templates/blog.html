@@ -1,0 +1,26 @@
+{% extends 'index.html' %}
+
+{% load app %}
+{% load static %}
+
+<!--記事カード-->
+{% block list %}
+
+<div class="container_article">
+{% for post in post_list %}
+<article class=" card ">
+<div class="item">
+    <img src= "{{ post.thumbnail.url  }}" class="card_image"/>
+    <p class="card_title">{{ post.title }}</p>
+    <p class="card_content">{{ post.card_text  | markdown_to_html | safe }}</p>
+    <div class="card_continue">
+        <button class="continue_button"><a href="{% url 'myBlog:detail' post.id %}">記事詳細</a></button>
+    </div>
+</div>
+</article>
+{%endfor%}
+
+</div>
+
+{% endblock %}
+

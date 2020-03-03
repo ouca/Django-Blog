@@ -1,0 +1,320 @@
+@charset "UTF-8";
+
+body{
+    margin: 0px;
+    padding 0px;
+}
+
+.title{
+    margin-top: 10px;
+    margin-left: 10px;
+    font-family: "Yu Mincho", "YuMincho" , serif;
+}
+
+.title a{
+    text-decoration: none;
+    color: #432;
+}
+
+.main-nav{
+    display: flex;
+    text-transform: uppercase;
+    font-size: 1.00rem;
+    list-style: none;
+    text-decoration: none;
+    margin-right: 30px;
+}
+
+.main-nav li {
+    margin-left: 25px;
+    margin-top: 6px;
+}
+
+.main-nav a {
+    color: #432;
+    text-decoration: none;
+}
+
+.main-nav a:hover{
+    color: #0bd;
+}
+
+.page-header{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.fullimg {
+background-image: url('img/SSGTHB82F6.jpg');
+    background-repeat: no-repeat;
+    background-size:  cover  ;
+    background-position: center center;
+    height: 500px;
+    margin: -15px  0 ;
+}
+
+.blogname{
+    color: #5b5c76;
+    margin-left: 20px;
+    padding: -21px 0 0 0 ;
+}
+
+/* 記事のカード */
+.card {
+    margin: 20px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 3px 6px #ccc;
+}
+
+.card_image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px 5px 0 0;
+}
+
+.card_title {
+    font-size: 150%;
+    margin: 10px;
+    color: #444;
+}
+
+.card_content {
+    padding: 10px;
+
+}
+
+.card_continue{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.continue_button{
+    font-size: 80%;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #000;
+    color: #000;
+    background-color: transparent;
+    font-family: "Yu Mincho", "YuMincho" , serif;
+}
+
+.continue_button a{
+    text-decoration: none;
+    color: #000;
+}
+
+/* 記事のレイアウト */
+.wrapper{
+    max-width: 1450px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+
+.main{
+width: 79%;
+font-family: "Yu Mincho", "YuMincho" , serif;
+}
+
+.container_article {
+    display: grid;
+    width: 75%;
+    gap: 1px;
+    grid-template-columns: 400px 400px 400px ;
+    margin-top: 3%;
+    margin-bottom: 10px;
+}
+
+.aside{
+    width: 25%;
+}
+
+.container_main{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+/*カテゴリー*/
+.sub_title{
+    font-size: 1.375rem;
+    padding: 27px 8px 8px;
+    border-bottom: 2px #000 solid ;
+    font-width: normal;
+    font-family: "Yu Mincho", "YuMincho" , serif;
+}
+
+.sub-menu{
+    margin-bottom: 60px;
+    list-style: none;
+    font-family: "Yu Mincho", "YuMincho" , serif;
+
+}
+
+.sub-menu li{
+    border-bottom: 1px #ddd solid;
+    margin-left: -45px;
+}
+
+.sub-menu a{
+    color: #432;
+    padding: 10px;
+    text-decoration: none;
+    text-align: left;
+}
+
+.sub-menu a:hover{
+    color: #0bd;
+}
+
+/*記事詳細*/
+
+.post-article{
+    margin: 0 ;
+}
+
+.post-info{
+    position: relative;
+    padding: 4px;
+    margin-bottom :40px;
+    font-family: "Yu Mincho", "YuMincho" , serif;
+
+}
+
+.post-data{
+    position: absolute;
+    top: 0;
+    padding-top: 10px;
+    margin-top: 36px;
+}
+
+.post-title{
+    width: 1200px;
+    font-size: 2rem;
+    font-weight: normal;
+}
+
+.post-title, .post-cat{
+    margin-left: 120px;
+}
+
+.post-cat{
+    display: inline-block;;
+    margin-top: -26px;
+}
+
+.post-cat a{
+    color: #000;
+    text-decoration: none;
+}
+
+.post-cat a:hover{
+    color: #0bd;
+}
+
+#hr {
+    margin-top: -53px;
+
+}
+
+#aside{
+    margin-top: 26px;
+}
+
+.toc{
+    background-color: #d3d3d3;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.toc ul {
+    list-style: none;
+}
+
+.toc a{
+    text-decoration: none;
+    color: #000;
+}
+
+.toc a:hover{
+    color: #0bd;
+}
+
+.markdown{
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: "Yu Mincho", "YuMincho" , serif;
+}
+
+
+.markdown h1{
+    margin: 0;
+}
+
+.markdown h2{
+    margin: 0;
+}
+
+.markdown hr{
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+
+
+}
+
+.markdown h3{
+    margin: 0;
+}
+
+.markdown p{
+    margin-bottom: 1rem;
+    margin: 0;
+}
+
+
+/* ぺージネーション */
+.page{
+    text-align: center;
+}
+
+.pagination{
+    display: flex;
+    list-style: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    justify-content: center;
+    font-family: "Yu Mincho", "YuMincho" , serif;
+}
+
+.pagination li {
+    margin-left: 25px;
+}
+
+.pagination a {
+    color: #432;
+    text-decoration: none;
+}
+
+.pagination a:hover{
+    color: #0bd;
+}
+
+/*フッター*/
+#wrapper{
+    background: #000000;
+    text-align: center;
+    padding: 5px 0;
+    margin: 0px;
+}
+
+#wrapper p{
+    color: #ffffff;
+    font-size: 0.875rem;
+}
+

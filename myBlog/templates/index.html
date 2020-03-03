@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="ja">
+<head>
+
+    {% if GOOGLE_ANALYTICS_TRACKING_ID %}
+        {% include 'ga.html' %}
+    {% endif %}
+
+
+    <meta charset="UTF-8">
+    <title>{% block title %}Tomoiのブログ{% endblock %}</title>
+    <meta name="description" content="制作物や学んだことをアウトプットしていくブログ">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+
+</head>
+
+
+<body>
+
+<header >
+<div class="page-header">
+    <h1 class="title"><a href="{% url 'myBlog:list' %}">Tomoiのブログ</a></h1>
+        <nav>
+            <ul class="main-nav">
+            <li><a href="{% url 'myBlog:BigCategory_lis' %}">Python</a></li>
+            <li><a href="{% url 'myBlog:CShrp_lis' %}">C#</a></li>
+                <li><a href="{% url 'myBlog:creation_lis' %}">創作物</a> </li>
+            </ul>
+        </nav>
+</div>
+
+<div class="fullimg">
+<div class="blogname">
+</div>
+</div>
+
+</header>
+
+<div class="container_main wrapper">
+
+<main class="main">
+    {% block list %}
+    {% endblock %}
+</main>
+
+    <aside>
+<h3 class="sub_title">メインカテゴリー</h3>
+<ul class="sub-menu">
+    <li><a href="{% url 'myBlog:BigCategory_lis' %}">Python</a></li>
+    <li><a href="{% url 'myBlog:CShrp_lis' %}">C#</a></li>
+    <li><a href="{% url 'myBlog:creation_lis' %}">創作物</a></li>
+</ul>
+
+<h3 class="sub_title">サブカテゴリー</h3>
+<ul class="sub-menu">
+    <li><a href="{% url 'myBlog:small_Django' %}">Django</a></li>
+    <li><a href="{% url 'myBlog:small_img' %}">画像</a></li>
+</ul>
+</aside>
+
+
+
+
+
+</div>
+
+<div class="page">
+    {% include 'Pagination.html' %}
+</div>
+
+<footer>
+    <div id="wrapper">
+        <p><small>&copy; 2020tomoi-blog</small></p>
+    </div>
+</footer>
+
+</body>
+
+
+</html>

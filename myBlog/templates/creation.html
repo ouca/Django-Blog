@@ -1,0 +1,25 @@
+{% extends 'index.html' %}
+
+{% load app %}
+{% load static %}
+
+{% block list %}
+
+<div class="container_article">
+{% for creat in Creation %}
+<article class=" card ">
+<div class="item">
+    <img src= "{{ creat.thumbnail.url  }}" class="card_image"/>
+    <p class="card_title">{{ creat.title }}</p>
+    <p class="card_content">{{ creat.card_text  | markdown_to_html | safe }}</p>
+    <div class="card_continue">
+        <button class="continue_button"><a href="{% url 'myBlog:detail' creat.id %}">記事詳細</a></button>
+    </div>
+</div>
+</article>
+ {%endfor%}
+
+</div>
+
+{% endblock %}
+

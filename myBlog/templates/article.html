@@ -1,0 +1,32 @@
+{% extends 'index.html' %}
+
+{% load app %}
+{% load static %}
+
+{% block list %}
+
+<article class="post-article">
+    <header class="post-info">
+        <h2 class="post-title">{{  article.title  }}</h2>
+        <p class="post-data">{{ article.published_date }}</p>
+        <p class="post-cat"><a href="{% url 'myBlog:BigCategory_lis' %}">{{ article.category.parent.name }}</a></p>
+        <p class="post-cat"><a href="{% url 'myBlog:small_img' %}">{{ article.category }}</a></p>
+    </header>
+
+    <hr id="hr">
+
+    <div class="markdown">
+        <p>{{   article.text | markdown_to_html   }}</p>
+    </div>
+<!-- highlight.js関連の読み込み -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/dracula.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+</article>
+
+{% endblock %}
+
+
+
+
