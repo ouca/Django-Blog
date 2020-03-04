@@ -3,7 +3,7 @@ from markdownx.admin import MarkdownxModelAdmin
 from django.utils.safestring import mark_safe
 from .models import (Post,BigCategory,SmallCategory)
 
-class PostAdmin(admin.ModelAdmin, ):
+class PostAdmin(admin.ModelAdmin):
     list_display = ('title', 'thumbnail_preview', 'card_text', 'is_public', 'created_date')
     ordering = ('-created_date',)
     list_filter = ('is_public',)
