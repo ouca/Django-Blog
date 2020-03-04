@@ -153,6 +153,7 @@ except ImportError:
 
 if not DEBUG:
     SECRET_KEY = os.environ['SECRET_KEY']
+    '''
     # GOOGLE_ANALYTICS_TRACKING_ID = os.environ['GOOGLE_ANALYTICS_TRACKING_ID']
     AWS_ACCESS_KEY_ID = 'AKIAS4Z3J2WRYYS6XS5B'
     AWS_SECRET_ACCESS_KEY = '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'
@@ -168,6 +169,8 @@ if not DEBUG:
 
     AWS_S3_FILE_OVERWRITE = False
     AWS_DEFAULT_ACL = None
+    '''
+
 
     import django_heroku
     django_heroku.settings(locals())
