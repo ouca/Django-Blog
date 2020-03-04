@@ -157,7 +157,7 @@ if not DEBUG:
     AWS_ACCESS_KEY_ID = 'AKIAS4Z3J2WRYYS6XS5B'
     AWS_SECRET_ACCESS_KEY = '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'
     AWS_STORAGE_BUCKET_NAME = 'tomoi-myblog'
-    AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+    AWS_S3_CUSTOM_DOMAIN = '%s.s3-ap-northeast-1.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
     AWS_S3_OBJECT_PARAMETERS = {
         'CacheControl': 'max-age=86400',  # 1日はそのキャッシュを使う
     }
