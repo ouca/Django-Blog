@@ -2,7 +2,7 @@ from django.db import models
 from django.db import models
 from markdownx.models import MarkdownxField
 from markdownx.utils import markdownify
-from django.utils import timezone
+from django.utils import timezone, datetime_safe
 import datetime
 import os
 from django.contrib.sitemaps import ping_google
