@@ -157,10 +157,14 @@ if not DEBUG:
     AWS_ACCESS_KEY_ID = 'AKIAS4Z3J2WRYYS6XS5B'
     AWS_SECRET_ACCESS_KEY = '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'
     AWS_STORAGE_BUCKET_NAME = 'tomoi-myblog'
+    AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+    AWS_S3_OBJECT_PARAMETERS = {
+        'CacheControl': 'max-age=86400',  # 1日はそのキャッシュを使う
+    }
 
-    DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
-    S3_URL = 'http://%s.s3.amazonaws.com/' % AWS_STORAGE_BUCKET_NAME
-    MEDIA_URL = S3_URL
+    AWS_LOCATION = 'static'
+    DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+    STATIC_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
 
     AWS_S3_FILE_OVERWRITE = False
     AWS_DEFAULT_ACL = None
