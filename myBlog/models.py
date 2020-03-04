@@ -49,7 +49,7 @@ class Post(models.Model):
     category = models.ForeignKey(SmallCategory, on_delete=models.PROTECT,  null=True, blank=True, related_name= "Category")
     is_public = models.BooleanField('公開可能か', default=True)
     created_date = models.DateTimeField(default=timezone.now)
-    published_date = models.DateField(blank=True, default=datetime.datetime.now())
+    published_date = models.DateField(blank=True,null=True)
     live = models.BooleanField(default=False)
 
     class Meta:
