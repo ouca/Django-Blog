@@ -91,9 +91,9 @@ import dj_database_url
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'MyBlog',
-        'USER': 'Tomoi',
-        'PASSWORD': 'TJNHMKSgds45',
+        'NAME': '*******',
+        'USER': '******',
+        'PASSWORD': '******',
         'HOST': 'localhost',
         'PORT': '5432',
     }
@@ -152,11 +152,11 @@ except ImportError:
 
 
 if not DEBUG:
-    SECRET_KEY = os.environ['SECRET_KEY']
+    SECRET_KEY = os.environ['*******']
     # GOOGLE_ANALYTICS_TRACKING_ID = os.environ['GOOGLE_ANALYTICS_TRACKING_ID']
-    AWS_ACCESS_KEY_ID = 'AKIAS4Z3J2WRYYS6XS5B'
-    AWS_SECRET_ACCESS_KEY = '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'
-    AWS_STORAGE_BUCKET_NAME = 'tomoi-myblog'
+    AWS_ACCESS_KEY_ID = '*************'
+    AWS_SECRET_ACCESS_KEY = '*******************'
+    AWS_STORAGE_BUCKET_NAME = '*************'
     AWS_S3_CUSTOM_DOMAIN = '%s.s3-ap-northeast-1.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
     AWS_S3_OBJECT_PARAMETERS = {
         'CacheControl': 'max-age=86400',  # 1日はそのキャッシュを使う
